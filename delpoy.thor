@@ -8,7 +8,7 @@ class Deploy < Thor
 		@api_token = ""
 		@testflight_url = "http://testflightapp.com/api/builds.json"
 		@build_folder = "tempBuild"
-		@scheme = "jdbdemo"
+		@scheme = "YOUR APP SCHEME"
 		
 		if options.notify?
 			@notify = "True"
@@ -19,7 +19,7 @@ class Deploy < Thor
 		if options.groups? and options.groups.length
 			@distribution_groups = options.groups.strip
 		else
-			@distribution_groups = "Solid Team"
+			@distribution_groups = "Default Distribution group"
 		end
 
 		if options.configuration? and options.configuration.length
